@@ -61,6 +61,7 @@ class AppBar extends HTMLElement {
 
         a {
           text-decoration: none;
+          color: white;
         }
 
         a:visited {
