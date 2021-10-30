@@ -124,6 +124,7 @@ class AppBar extends HTMLElement {
 
           .nav__item a {
             padding: 0;
+            color: #52525B
           }
 
           .nav__item:hover::after {
