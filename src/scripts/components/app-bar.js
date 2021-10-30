@@ -107,6 +107,7 @@ class AppBar extends HTMLElement {
         @media screen and (max-width: 510px) {
           .header__menu {
             display: block;
+            color: #52525B;
           }
 
           .menu__drawer {
