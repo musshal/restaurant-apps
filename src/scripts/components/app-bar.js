@@ -17,6 +17,9 @@ class AppBar extends HTMLElement {
 
         .luwe-text {
           color: #bf1722;
+          min-width: 44px;
+          min-height: 44px;
+          width: 100%;
         }
 
         .rene-text {
@@ -55,13 +58,28 @@ class AppBar extends HTMLElement {
           margin-bottom: -8px;
         }
 
+        ul {
+          min-width: 44px;
+          min-height: 44px;
+          width: 100%;
+        }
+
+        .nav__item li {
+          min-width: 44px;
+          min-height: 44px;
+          width: 100%;
+        }
+
         .nav__item a {
           padding: 15px 0; 
+          color: white;
+          min-width: 44px;
+          min-height: 44px;
+          width: 100%;
         }
 
         a {
           text-decoration: none;
-          color: white;
         }
 
         a:visited {
@@ -74,7 +92,10 @@ class AppBar extends HTMLElement {
 
         .header__menu {
           font-size: 32px;
-          margin: -5px auto;
+          min-width: 44px;
+          min-height: 44px;
+          margin: -5px 0;
+          text-align: center;
           display: none;
         }
 
@@ -89,9 +110,9 @@ class AppBar extends HTMLElement {
 
           .menu__drawer {
             display: flex;
-            margin: auto;
-            padding: 15px 0;
-            gap: 210px;
+            width: 100%;
+            padding: 15px;
+            justify-content: space-between;
             border-bottom: 1px solid #dee2e6;
             font-size: 21px;
             margin-top: 10px;
@@ -102,7 +123,7 @@ class AppBar extends HTMLElement {
             top: 0;
             width: 100%;
             height: 200px;
-            padding: 10px;
+            padding: 10px 15px;
             position: absolute;
             background-color: #f3f7f9;
             color: #52525B;
@@ -124,7 +145,10 @@ class AppBar extends HTMLElement {
 
           .nav__item a {
             padding: 0;
-            color: #52525B
+            color: #52525B;
+            min-width: 44px;
+            min-height: 44px;
+            width: 100%;
           }
 
           .nav__item:hover::after {
@@ -144,7 +168,7 @@ class AppBar extends HTMLElement {
         </div>
         
         <nav class="nav">
-          <a id="menu" class="header__menu">☰</a>
+          <a href="#drawer" id="menu" class="header__menu">☰</a>
           <ul id="drawer">
             <div class="menu__drawer">
               <h1 class="header__title">

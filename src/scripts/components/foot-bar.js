@@ -43,7 +43,7 @@ class FootBar extends HTMLElement {
           display: flex;
           flex-direction: column;
           padding: 0 1px;
-          gap: 5px;
+          gap: 10px;
         }
 
         .list__menu a {
@@ -80,9 +80,9 @@ class FootBar extends HTMLElement {
           <h2 tabIndex="0">LuweRene</h2>
           <p tabIndex="0">Dapatkan kemudahan mencari restoran terbaik di sekitarmu dengan LuweRene.</p>
           <div class="social__links">
-            <a href="#"><img src="logos/Icon_Facebook.svg" alt="facebook" width="30px"></a>
-            <a href="#"><img src="logos/instagram-circle.svg" alt="instagram" width="30px"></a>
-            <a href="#"><img src="logos/Icon_Twitter.svg" alt="twitter" width="30px"></a>
+            <a href="#"><img src="logos/Icon_Facebook.svg" alt="facebook" width="44px"></a>
+            <a href="#"><img src="logos/instagram-circle.svg" alt="instagram" width="44px"></a>
+            <a href="#"><img src="logos/Icon_Twitter.svg" alt="twitter" width="44px"></a>
           </div>
         </div>
         <div class="footer-wrapper__nav">
