@@ -76,18 +76,15 @@ class AppBar extends HTMLElement {
         .header__menu {
           font-size: 32px;
           min-width: 44px;
-          min-height: 44px;
-          width: 100%;
           padding: 5px 0;
           margin: -10px 0;
           display: none;
           color: #52525B;
-          text-align: right;
+          text-align: center;
         }
 
         .menu__drawer {
           display: none;
-          color: white;
         }
 
         @media screen and (max-width: 510px) {
@@ -113,7 +110,6 @@ class AppBar extends HTMLElement {
             position: absolute;
             background-color: #f3f7f9;
             color: #52525B;
-            text-align: center;
             display: flex;
             flex-direction: column;
             transform: translate(0, -250px);
@@ -127,6 +123,10 @@ class AppBar extends HTMLElement {
 
           #drawer.open {
             transform: translate(0, 0);
+          }
+
+          .nav__item {
+            text-align: center;
           }
 
           .nav__item a {
@@ -156,7 +156,7 @@ class AppBar extends HTMLElement {
               <h1 class="header__title">
                 <a href="#"><span class="luwe-text">Luwe</span><span class="rene-text">Rene</span></a>
               </h1>
-              <a id="menu" class="header__menu">✖</a>
+              <a href="#drawer" id="menu" class="header__menu">✖</a>
             </div>
             <li class="nav__item">
               <a href="/">Home</a>
