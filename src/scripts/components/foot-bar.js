@@ -35,6 +35,14 @@ class FootBar extends HTMLElement {
           padding: 0 32px;
         }
 
+        .social__links {
+          margin-top: 45px;
+        }
+
+        .social__links a {
+          padding: 12px 3px;
+        }
+
         .social__links a:hover {
           border-bottom: 1px solid #a3a1aa;
         }
@@ -43,7 +51,10 @@ class FootBar extends HTMLElement {
           display: flex;
           flex-direction: column;
           padding: 0 1px;
-          gap: 10px;
+        }
+
+        a {
+          padding: 0 0 23px;
         }
 
         .list__menu a {
@@ -69,6 +80,7 @@ class FootBar extends HTMLElement {
           .list__menu {
             flex-direction: row;
             justify-content: center;
+            gap: 15px;
             margin-bottom: 10px;
           }
         }
