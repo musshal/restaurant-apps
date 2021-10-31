@@ -27,7 +27,9 @@ class SearchBar extends HTMLElement {
       }
       
       .search-container > input {
-        width: 250px;
+        min-width: 250px;
+        min-height: 44px;
+        width: 100%;
         padding: 10px;
         border: 0;
         background-color: #f3f7f9;

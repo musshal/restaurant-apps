@@ -35,16 +35,12 @@ class FootBar extends HTMLElement {
           padding: 0 32px;
         }
 
-        .social__links {
-          margin-top: 45px;
-        }
-
         .social__links a {
-          padding: 12px 3px;
+          padding: 12px 0;
         }
 
         .social__links a:hover {
-          border-bottom: 1px solid #a3a1aa;
+          opacity: 0.8;
         }
 
         .list__menu {
@@ -53,13 +49,11 @@ class FootBar extends HTMLElement {
           padding: 0 1px;
         }
 
-        a {
-          padding: 0 0 23px;
-        }
-
         .list__menu a {
           text-decoration: none;
           color: #a3a1aa;
+          padding: 12px 0;
+          margin-top: -15px;
         }
 
         .list__menu a:hover {
@@ -74,14 +68,13 @@ class FootBar extends HTMLElement {
 
           .footer-wrapper__nav {
             border-top: 1px solid #dee2e6;
-            margin-top: 32px;
+            margin-top: 28px;
           }
 
           .list__menu {
             flex-direction: row;
             justify-content: center;
             gap: 15px;
-            margin-bottom: 10px;
           }
         }
       </style>
