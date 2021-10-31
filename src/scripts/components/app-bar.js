@@ -17,13 +17,12 @@ class AppBar extends HTMLElement {
 
         .luwe-text {
           color: #bf1722;
-          min-width: 44px;
-          min-height: 44px;
-          width: 100%;
+          padding: 3px 0;
         }
 
         .rene-text {
           color: burlywood;
+          padding: 3px 0;
         }
         
         .header__title:hover::after {
@@ -43,8 +42,8 @@ class AppBar extends HTMLElement {
 
         .nav__item {
           display: inline-block;
-          padding: 0 5px;
-          line-height: 35px;
+          padding: 7px 5px;
+          line-height: 30px;
           font-weight: bolder;
         }
 
@@ -58,24 +57,8 @@ class AppBar extends HTMLElement {
           margin-bottom: -8px;
         }
 
-        ul {
-          min-width: 44px;
-          min-height: 44px;
-          width: 100%;
-        }
-
-        .nav__item li {
-          min-width: 44px;
-          min-height: 44px;
-          width: 100%;
-        }
-
         .nav__item a {
-          padding: 15px 0; 
-          color: white;
-          min-width: 44px;
-          min-height: 44px;
-          width: 100%;
+          padding: 12px 0; 
         }
 
         a {
@@ -94,9 +77,12 @@ class AppBar extends HTMLElement {
           font-size: 32px;
           min-width: 44px;
           min-height: 44px;
-          margin: -5px 0;
-          text-align: center;
+          width: 100%;
+          padding: 5px 0;
+          margin: -10px 0;
           display: none;
+          color: #52525B;
+          text-align: right;
         }
 
         .menu__drawer {
@@ -107,25 +93,23 @@ class AppBar extends HTMLElement {
         @media screen and (max-width: 510px) {
           .header__menu {
             display: block;
-            color: #52525B;
           }
 
           .menu__drawer {
             display: flex;
             width: 100%;
-            padding: 15px;
+            padding: 20px 32px;
             justify-content: space-between;
             border-bottom: 1px solid #dee2e6;
             font-size: 21px;
-            margin-top: 10px;
+            margin: 10px 0;
           }
 
           #drawer {
             left: 0;
             top: 0;
             width: 100%;
-            height: 200px;
-            padding: 10px 15px;
+            height: 250px;
             position: absolute;
             background-color: #f3f7f9;
             color: #52525B;
@@ -146,11 +130,7 @@ class AppBar extends HTMLElement {
           }
 
           .nav__item a {
-            padding: 0;
             color: #52525B;
-            min-width: 44px;
-            min-height: 44px;
-            width: 100%;
           }
 
           .nav__item:hover::after {

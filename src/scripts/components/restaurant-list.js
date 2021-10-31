@@ -54,14 +54,12 @@ class RestaurantList extends HTMLElement {
           font-size: 15px;
           height: 100px;
           overflow: hidden;
-          text-overflow: ellipsis;
         }
 
         .content-item__info button {
           min-width: 44px;
           min-height: 44px;
           width: 100%;
-          padding: 10px;
           letter-spacing: 1px;
           background-color: #bf1722;
           color: white;

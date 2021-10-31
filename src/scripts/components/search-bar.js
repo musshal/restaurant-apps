@@ -21,19 +21,15 @@ class SearchBar extends HTMLElement {
       }
 
       .search-container {
-        margin-top: 28px;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         padding: 5px;
         border-radius: 20px;
-        display: flex;
-        position: sticky;
       }
       
       .search-container > input {
         width: 250px;
-        padding: 15px;
+        padding: 10px;
         border: 0;
-        font-weight: bold;
         background-color: #f3f7f9;
         color: #52525b
       }
@@ -41,25 +37,14 @@ class SearchBar extends HTMLElement {
       .search-container > input:focus {
         outline: 0;
       }
-
-      .search-container >  input::placeholder {
-        font-weight: normal;
-      }
       
-      .search-container > input:focus::placeholder {
-        font-weight: bold;
-      }
-      
-      .search-input:hover::-webkit-search-cancel-button{
+      .search-input:hover::-webkit-search-cancel-button {
         cursor: pointer;
       }
 
       @media screen and (max-width: 600px) {
         .search-container {
-          position: static;
-          width: 100%;
-          margin-top: 0;
-          margin-bottom: 28px;
+          margin-bottom: 32px;
         }
       
         .search-container > input {

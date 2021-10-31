@@ -69,8 +69,7 @@ class FootBar extends HTMLElement {
           .list__menu {
             flex-direction: row;
             justify-content: center;
-            gap: 10px;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
           }
         }
       </style>

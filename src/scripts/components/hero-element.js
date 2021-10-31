@@ -32,6 +32,10 @@ class HeroElement extends HTMLElement {
           color: white;
         }
 
+        .jumbotron__content {
+          margin-bottom: 16px;
+        }
+
         .jumbotron__header {
           font-size: 25px;
           letter-spacing: 1px;
@@ -40,7 +44,7 @@ class HeroElement extends HTMLElement {
         .title-text {
           color: black;
           background-color: white;
-          padding: 5px;
+          padding: 0 5px;
           border-radius: 15px;
         }
 
@@ -48,16 +52,13 @@ class HeroElement extends HTMLElement {
           font-weight: unset;
           letter-spacing: 3px;
           padding: 32px 0;
-          margin-bottom: 20px;
+          
         }
 
         .btn {
-          border-radius: 20px;
-          padding: 10px;
+          border-radius: 25px;
+          padding: 11px;
           box-sizing: border-box;
-          min-width: 44px;
-          min-height: 44px;
-          width: 100%;
           color: white;
           background-color: #bf1722;
           letter-spacing: 1px;
@@ -77,8 +78,10 @@ class HeroElement extends HTMLElement {
       </style>
 
       <div class="jumbotron">
-        <h1 class="jumbotron__header" tabIndex="0">LuweRene is the best <span class="title-text">Restaurant Finder</span></h1>
-        <h2 class="jumbotron__sub-header" tabIndex="0">Kami akan membantu kamu <br /> untuk mencari restoran terbaik <br /> di sekitarmu dengan mudah. <br /> Gaskuy!</h2>
+        <div class="jumbotron__content" tabIndex="0">
+          <h1 class="jumbotron__header">LuweRene is the best <span class="title-text">Restaurant Finder</span></h1>
+          <h2 class="jumbotron__sub-header">Kami akan membantu kamu <br /> untuk mencari restoran terbaik <br /> di sekitarmu dengan mudah. <br /> Gaskuy!</h2>
+        </div>
         <a href="#searchElement" class="btn">Cari Restoran</a>
       </div>`;
   }

@@ -1,5 +1,5 @@
 import "regenerator-runtime"; /* for async await transpile */
-import "../styles/main.css";
+import "../styles/main.scss";
 import "./components/app-bar.js";
 import "./components/hero-element.js";
 import "./components/search-bar.js";
