@@ -143,32 +143,32 @@ class AppBar extends HTMLElement {
         }
       </style>
       
-        <div class="header__inner">
-          <h1 class="header__title">
-            <a href="#"><span class="luwe-text">Luwe</span><span class="rene-text">Rene</span></a>
-          </h1>
-        </div>
-        
-        <nav class="nav">
-          <a href="#drawer" id="menu" class="header__menu">☰</a>
-          <ul id="drawer">
-            <div class="menu__drawer">
-              <h1 class="header__title">
-                <a href="#"><span class="luwe-text">Luwe</span><span class="rene-text">Rene</span></a>
-              </h1>
-              <a href="#drawer" id="menu" class="header__menu">✖</a>
-            </div>
-            <li class="nav__item">
-              <a href="/">Home</a>
-            </li>
-            <li class="nav__item">
-              <a href="#">Favorite</a>
-            </li>
-            <li class="nav__item">
-              <a href="https://www.linkedin.com/in/musshal/" target="_blank">About Us</a>
-            </li>
-          </ul>
-        </nav>`;
+      <div class="header__inner">
+        <h1 class="header__title">
+          <a href="#"><span class="luwe-text">Luwe</span><span class="rene-text">Rene</span></a>
+        </h1>
+      </div>
+      
+      <nav class="nav">
+        <a href="#drawer" id="menu_open" class="header__menu">☰</a>
+        <ul id="drawer">
+          <div class="menu__drawer">
+            <h1 class="header__title">
+              <a href="#"><span class="luwe-text">Luwe</span><span class="rene-text">Rene</span></a>
+            </h1>
+            <a href="#drawer" id="menu_close" class="header__menu">✖</a>
+          </div>
+          <li class="nav__item">
+            <a href="/">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Favorite</a>
+          </li>
+          <li class="nav__item">
+            <a href="https://www.linkedin.com/in/musshal/" target="_blank">About Us</a>
+          </li>
+        </ul>
+      </nav>`;
   }
 }
 

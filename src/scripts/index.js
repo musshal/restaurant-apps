@@ -6,18 +6,19 @@ import "./components/search-bar.js";
 import "./components/restaurant-list.js";
 import "./components/foot-bar.js";
 
-const menu = document.querySelector("#menu");
+const menuOpen = document.querySelector("#menu_open");
+const menuClose = document.querySelector("#menu_close");
 const drawer = document.querySelector("#drawer");
-const main = document.querySelector("body");
 const inputSearch = document.getElementById("searchElement");
 
-menu.addEventListener("click", function (event) {
-  drawer.classList.toggle("open");
+menuOpen.addEventListener("click", function (event) {
+  drawer.classList.add("open");
   event.stopPropagation();
 });
 
-main.addEventListener("click", function (event) {
+menuClose.addEventListener("click", function (event) {
   drawer.classList.remove("open");
+  event.stopPropagation();
 });
 
 inputSearch.addEventListener("keyup", function (event) {
