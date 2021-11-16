@@ -12,7 +12,7 @@ class AppBar extends HTMLElement {
         }
 
         .header__title {
-          font-family: Geneva, Verdana, sans-serif;
+          font-family: Verdana, sans-serif;
         }
 
         .luwe-text {
@@ -35,8 +35,8 @@ class AppBar extends HTMLElement {
           margin-bottom: -8px;
         }
 
-        .nav {
-          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        nav {
+          font-family: "Segoe UI", sans-serif;
           color: white;
         }
 
@@ -47,7 +47,11 @@ class AppBar extends HTMLElement {
           font-weight: bolder;
         }
 
-        .nav__item:hover::after {
+        .nav__item a {
+          padding: 12px 0; 
+        }
+
+        .nav__item a:hover::after {
           content: '';
           display: block;
           border-bottom: 3px solid burlywood;
@@ -55,10 +59,6 @@ class AppBar extends HTMLElement {
           margin: auto;
           padding-bottom: 5px;
           margin-bottom: -8px;
-        }
-
-        .nav__item a {
-          padding: 12px 0; 
         }
 
         a {
@@ -80,7 +80,6 @@ class AppBar extends HTMLElement {
           padding: 5px 0;
           margin: -10px 0;
           display: none;
-          color: #52525B;
           text-align: center;
         }
 
@@ -103,7 +102,7 @@ class AppBar extends HTMLElement {
             margin: 10px 0;
           }
 
-          #drawer {
+          .drawer {
             left: 0;
             top: 0;
             width: 100%;
@@ -122,7 +121,7 @@ class AppBar extends HTMLElement {
             transform: translate(0, 0);
           }
 
-          #drawer.open {
+          .drawer.open {
             transform: translate(0, 0);
           }
 
@@ -146,24 +145,24 @@ class AppBar extends HTMLElement {
       
       <div class="header__inner">
         <h1 class="header__title">
-          <a href="#"><span class="luwe-text">Luwe</span><span class="rene-text">Rene</span></a>
+          <a href="/#"><span class="luwe-text">Luwe</span><span class="rene-text">Rene</span></a>
         </h1>
       </div>
       
-      <nav class="nav">
+      <nav>
         <a href="#drawer" id="menu_open" class="header__menu">☰</a>
-        <ul id="drawer">
+        <ul id="drawer" class="drawer">
           <div class="menu__drawer">
             <h1 class="header__title">
-              <a href="#"><span class="luwe-text">Luwe</span><span class="rene-text">Rene</span></a>
+              <a href="/"><span class="luwe-text">Luwe</span><span class="rene-text">Rene</span></a>
             </h1>
             <a href="#drawer" id="menu_close" class="header__menu">✖</a>
           </div>
           <li class="nav__item">
-            <a href="/">Home</a>
+            <a href="/#/restaurant">Home</a>
           </li>
           <li class="nav__item">
-            <a href="#">Favorite</a>
+            <a href="/#/favorite">Favorite</a>
           </li>
           <li class="nav__item">
             <a href="https://www.linkedin.com/in/musshal/" target="_blank">About Us</a>

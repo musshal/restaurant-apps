@@ -3,36 +3,39 @@ import "../styles/main.scss";
 import "./components/app-bar.js";
 import "./components/hero-element.js";
 import "./components/search-bar.js";
-import "./components/restaurant-list.js";
 import "./components/foot-bar.js";
+import App from "./views/app";
 
-const menuOpen = document.querySelector("#menu_open");
-const menuClose = document.querySelector("#menu_close");
-const drawer = document.querySelector("#drawer");
-const inputSearch = document.getElementById("searchElement");
-
-menuOpen.addEventListener("click", function (event) {
-  drawer.classList.add("open");
-  event.stopPropagation();
+const app = new App({
+  open: document.querySelector("#menu_open"),
+  drawer: document.querySelector("#drawer"),
+  close: document.querySelector("#menu_close"),
+  search: document.querySelector("#search"),
+  content: document.querySelector("#maincontent"),
 });
 
-menuClose.addEventListener("click", function (event) {
-  drawer.classList.remove("open");
-  event.stopPropagation();
+window.addEventListener("hashchange", () => {
+  app.renderPage();
 });
 
-inputSearch.addEventListener("keyup", function (event) {
-  const search = inputSearch.value.toLowerCase();
-  const restaurants = document.querySelectorAll(".content-item");
-
-  Array.from(restaurants).forEach((restaurant) => {
-    const restaurantLoc =
-      restaurant.children[1].children[1].children[0].textContent;
-
-    if (restaurantLoc.toLowerCase().indexOf(search) != -1) {
-      restaurant.style.display = "block";
-    } else {
-      restaurant.style.display = "none";
-    }
-  });
+window.addEventListener("load", () => {
+  app.renderPage();
 });
+
+// const search = document.getElementById("search");
+
+// search.addEventListener("keyup", function (event) {
+//   const input = search.value.toLowerCase();
+//   const restaurants = document.querySelectorAll(".content-item");
+
+//   Array.from(restaurants).forEach((restaurant) => {
+//     const restaurantLoc =
+//       restaurant.children[1].children[1].children[0].textContent;
+
+//     if (restaurantLoc.toLowerCase().indexOf(input) != -1) {
+//       restaurant.style.display = "block";
+//     } else {
+//       restaurant.style.display = "none";
+//     }
+//   });
+// });

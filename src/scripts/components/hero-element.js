@@ -28,7 +28,7 @@ class HeroElement extends HTMLElement {
         .jumbotron {
           margin: 75px auto;
           text-align: center;
-          font-family: cursive, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          font-family: cursive, sans-serif;
           color: white;
         }
 
@@ -88,7 +88,7 @@ class HeroElement extends HTMLElement {
           <h1 class="jumbotron__header">LuweRene is the best <span class="title-text">Restaurant Finder</span></h1>
           <h2 class="jumbotron__sub-header">Kami akan membantu kamu <br /> untuk mencari restoran terbaik <br /> di sekitarmu dengan mudah. <br /> Gaskuy!</h2>
         </div>
-        <a href="#searchElement" class="btn">Cari Restoran</a>
+        <a href="#search" class="btn">Cari Restoran</a>
       </div>`;
   }
 }

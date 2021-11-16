@@ -11,15 +11,18 @@ class FootBar extends HTMLElement {
   render() {
     this.shadowDOM.innerHTML = `
       <style>
-        :host {
-          color: #a3a1aa;
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box; 
         }
 
-        :host > p {
-          text-align: center;
-          font-weight: bolder;
-          padding: 20px;
-          border-top: 1px solid #dee2e6;
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
         }
 
         .footer-wrapper {
@@ -27,12 +30,16 @@ class FootBar extends HTMLElement {
           max-width: 1170px;
           width: 100%;
           display: flex;
+          padding: 20px 32px;
           justify-content: space-between;
         }
 
-        .footer-wrapper__info,
-        .footer-wrapper__nav {
-          padding: 0 32px;
+        h2 {
+          margin-bottom: 15px;
+        }
+
+        p {
+          margin-bottom: 15px;
         }
 
         .social__links a {
@@ -60,6 +67,22 @@ class FootBar extends HTMLElement {
           text-decoration: underline;
         }
 
+        .copyright {
+          text-align: center;
+          padding: 20px;
+          border-top: 1px solid #dee2e6;
+        }
+
+        .luwe-text {
+          color: #bf1722;
+          font-weight: bolder;
+        }
+
+        .rene-text {
+          color: burlywood;
+          font-weight: bolder;
+        }
+
         @media screen and (max-width: 800px) {
           .footer-wrapper {
             text-align: center;
@@ -68,7 +91,11 @@ class FootBar extends HTMLElement {
 
           .footer-wrapper__nav {
             border-top: 1px solid #dee2e6;
-            margin-top: 28px;
+            margin-top: 20px;
+          }
+
+          .footer-wrapper__nav h2 {
+            margin-top: 20px;
           }
 
           .list__menu {
@@ -92,13 +119,13 @@ class FootBar extends HTMLElement {
         <div class="footer-wrapper__nav">
           <h2 tabIndex="0">Menu</h2>
           <div class="list__menu">
-            <a href="/">Home</a>
-            <a href="#">Favorite</a>
+            <a href="#/restaurant">Home</a>
+            <a href="#/favorite">Favorite</a>
             <a href="https://www.linkedin.com/in/musshal/" target="_blank">About Us</a>
           </div>
         </div>
       </div>
-      <p tabIndex="0">Copyright &copy; 2021 - LuweRene</p>`;
+      <p tabIndex="0" class="copyright">Copyright &copy; 2021 - <span class="luwe-text">Luwe</span><span class="rene-text">Rene</span></p>`;
   }
 }
 

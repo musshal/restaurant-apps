@@ -6,20 +6,6 @@ class SearchBar extends HTMLElement {
   render() {
     this.innerHTML = `
     <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-      }
-
       .search-container {
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         padding: 5px;
@@ -55,8 +41,8 @@ class SearchBar extends HTMLElement {
       }
     </style>
     
-    <div id="searchContainer" class="search-container">
-      <input type="search" placeholder="Masukan nama kota Anda berada..." id="searchElement" class="search-input">
+    <div class="search-container">
+      <input type="search" placeholder="Masukan nama kota Anda berada..." id="search" class="search-input">
     </div>`;
   }
 }
