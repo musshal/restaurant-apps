@@ -15,7 +15,7 @@
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "babel-loader": "^8.1.0",
-    "copy-webpack-plugin": "^6.0.3",
+    "copy-webpack-plugin": "^6.0.2",
     "css-loader": "^3.6.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -30,16 +30,19 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^4.0.2",
     "sass": "^1.43.4",
-    "sass-loader": "^12.3.0",
+    "sass-loader": "^10.2.0",
     "style-loader": "^1.2.1",
-    "webpack": "^5.61.0",
+    "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.0.9",
     "whatwg-fetch": "^3.2.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "file-loader": "^6.2.0",
-    "regenerator-runtime": "^0.13.5"
+    "idb": "^6.1.5",
+    "regenerator-runtime": "^0.13.5",
+    "serviceworker-webpack-plugin": "^1.0.1"
   }
 }

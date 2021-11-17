@@ -14,7 +14,7 @@ const Restaurants = {
   },
 
   async afterRender() {
-    const data = await RestaurantSource.getRestaurantList();
+    const data = await RestaurantSource.getRestaurants();
     const restaurants = data.restaurants;
     const restaurantsContainer = document.querySelector("#restaurants");
 

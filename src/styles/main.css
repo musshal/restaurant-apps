@@ -71,8 +71,8 @@ header::after {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   border-bottom: 1px solid #dee2e6;
   margin-bottom: 32px;
 }
@@ -90,7 +90,7 @@ header::after {
   padding: 12px;
   border-radius: 15px;
   -webkit-box-shadow: 0 3px #8b0000;
-          box-shadow: 0 3px #8b0000;
+  box-shadow: 0 3px #8b0000;
 }
 
 .content .content__header a:hover {
@@ -102,14 +102,14 @@ header::after {
   position: relative;
   top: 3px;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .content .restaurants {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr) [3];
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
 
@@ -117,7 +117,7 @@ header::after {
   width: 100%;
   border-radius: 5px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .content .restaurants .content-item img {
@@ -135,8 +135,8 @@ header::after {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .content .restaurants .content-item .content-item__info .loc__rate .star {
@@ -171,7 +171,7 @@ header::after {
   border-radius: 10px;
   margin-top: 15px;
   -webkit-box-shadow: 0 3px #8b0000;
-          box-shadow: 0 3px #8b0000;
+  box-shadow: 0 3px #8b0000;
 }
 
 .content .restaurants .content-item .content-item__info button:hover {
@@ -183,7 +183,7 @@ header::after {
   position: relative;
   top: 3px;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 footer {
@@ -201,8 +201,8 @@ footer {
 
 @media screen and (max-width: 1200px) and (max-width: 1000px) {
   #restaurants {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr) [2];
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -210,13 +210,13 @@ footer {
   .content__header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     text-align: center;
   }
   #restaurants {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-columns: (1fr) [1];
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -4,7 +4,9 @@ import "./components/app-bar.js";
 import "./components/hero-element.js";
 import "./components/search-bar.js";
 import "./components/foot-bar.js";
+import "@fortawesome/fontawesome-free/js/all.js";
 import App from "./views/app";
+import swRegister from "./utils/sw-register";
 
 const app = new App({
   open: document.querySelector("#menu_open"),
@@ -20,6 +22,7 @@ window.addEventListener("hashchange", () => {
 
 window.addEventListener("load", () => {
   app.renderPage();
+  swRegister();
 });
 
 // const search = document.getElementById("search");

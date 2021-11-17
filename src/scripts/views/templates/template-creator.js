@@ -2,12 +2,12 @@ import CONFIG from "../../globals/config";
 
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="content-item" id="${restaurant.id}" tabIndex="0">
-    <img src="${CONFIG.BASE_IMAGE_SM_URL}/${restaurant.pictureId}" alt="">
+    <img src="${CONFIG.BASE_IMG_SM_URL}/${restaurant.pictureId}" alt="">
     <div class="content-item__info">
       <h1>${restaurant.name}</h1>
       <div class="loc__rate">
-        <h2 id="loc" class="loc">📍 ${restaurant.city}</h2>
-        <h3><span class="star">&#9733;</span> ${restaurant.rating}</h3>
+        <h2><i class="fas fa-map-marker-alt" title="Icon Kota Restoran"></i> ${restaurant.city}</h2>
+        <h3><i class="fas fa-star" title="Icon Ulasan Restoran"></i> ${restaurant.rating}</h3>
       </div>
       <p>${restaurant.description}</p>
       <button onclick="window.location.href='/#/restaurant/${restaurant.id}'">Lihat Selengkapnya</button>
@@ -16,23 +16,29 @@ const createRestaurantItemTemplate = (restaurant) => `
 
 const createRestaurantDetailTemplate = (restaurant) => `
   <div class="restaurant__container">
-    <img class="restaurant__poster" src="${CONFIG.BASE_IMAGE_MD_URL}/${
+    <img class="restaurant__poster" src="${CONFIG.BASE_IMG_MD_URL}/${
   restaurant.pictureId
 }" alt="${restaurant.name}" />
     <div class="restaurant__info">
       <div class="restaurant__header">
         <h1 class="restaurant__name">${restaurant.name}</h1>
-        <h5>${restaurant.categories
-          .map((category) => `<span>${category.name}</span>`)
-          .join(" ")}</h5>
+        <h2><i class="fas fa-star" title="Icon Ulasan Restoran"></i> ${
+          restaurant.rating
+        }</h2>
       </div>
       <div class=loc__rate>
-        <h2 id="loc" class="loc">📍${restaurant.city}</h2>
-        <h3><span class="star">&#9733;</span> ${restaurant.rating}</h3>
+        <h2><i class="fas fa-map-marker-alt" title="Icon Kota Restoran"></i> ${
+          restaurant.city
+        }</h2>
+        <h2><i class="fas fa-map-marked-alt" title="Icon Alamat Restoran"></i> ${
+          restaurant.address
+        }</h2>
       </div>
+      <h5>${restaurant.categories
+        .map((category) => `<span>${category.name}</span>`)
+        .join(" ")}</h5>
       <h4>Deskripsi</h4>
       <p>${restaurant.description}</p>
-      <a href="###" class="favorite">Tambahkan ke Favorite</a>
     </div>
   </div>
   <div class="restaurant__menu">
@@ -70,4 +76,19 @@ const createRestaurantDetailTemplate = (restaurant) => `
       </div>
   </div>`;
 
-export { createRestaurantItemTemplate, createRestaurantDetailTemplate };
+const createAddFavoriteButtonTemplate = () => `
+  <button aria-label="like this restaurant" id="favoriteButton" class="favorite">
+    <i class="far fa-heart" aria-hidden="true"></i>
+  </button>`;
+
+const createAddedFavoriteButtonTemplate = () => `
+<button aria-label="unlike this restaurant" id="favoriteButton" class="favorite">
+  <i class="fas fa-heart" aria-hidden="true"></i>
+</button>`;
+
+export {
+  createRestaurantItemTemplate,
+  createRestaurantDetailTemplate,
+  createAddFavoriteButtonTemplate,
+  createAddedFavoriteButtonTemplate,
+};
