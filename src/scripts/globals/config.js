@@ -8,6 +8,7 @@ const CONFIG = {
   DB_NAME: 'luwe-rene-db',
   DB_VERSION: 1,
   OBJECT_STORE_NAME: 'restaurants',
+  WEB_SOCKET_SERVER: '',
 };
 
 export default CONFIG;
