@@ -10,10 +10,8 @@
     "sourceType": "module"
   },
   "rules": {
-    "import/no-extraneous-dependencies": [
-      {
-        "linebreak-style": 0
-      }
-    ]
+    "no-restricted-globals": ["error", "event", "fdescribe"],
+    "no-underscore-dangle": [0],
+    "no-console": [0]
   }
 }

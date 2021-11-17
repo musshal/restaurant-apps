@@ -1,7 +1,7 @@
-import RestaurantSource from "../../data/restaurant-source";
-import UrlParser from "../../routes/url-parser";
-import FavoriteButtonInitiator from "../../utils/favorite-button-initiator";
-import { createRestaurantDetailTemplate } from "../templates/template-creator";
+import RestaurantSource from '../../data/restaurant-source';
+import UrlParser from '../../routes/url-parser';
+import FavoriteButtonInitiator from '../../utils/favorite-button-initiator';
+import { createRestaurantDetailTemplate } from '../templates/template-creator';
 
 const Detail = {
   async render() {
@@ -19,13 +19,13 @@ const Detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const data = await RestaurantSource.getRestaurantDetail(url.id);
-    const restaurant = data.restaurant;
-    const restaurantContainer = document.querySelector("#restaurant");
+    const { restaurant } = data;
+    const restaurantContainer = document.querySelector('#restaurant');
 
     restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
     FavoriteButtonInitiator.init({
       favoriteButtonContainer: document.querySelector(
-        "#favoriteButtonContainer"
+        '#favoriteButtonContainer',
       ),
       restaurant: {
         id: restaurant.id,

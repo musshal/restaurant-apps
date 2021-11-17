@@ -1,26 +1,26 @@
-import "regenerator-runtime"; /* for async await transpile */
-import "../styles/main.scss";
-import "./components/app-bar.js";
-import "./components/hero-element.js";
-import "./components/search-bar.js";
-import "./components/foot-bar.js";
-import "@fortawesome/fontawesome-free/js/all.js";
-import App from "./views/app";
-import swRegister from "./utils/sw-register";
+import 'regenerator-runtime'; /* for async await transpile */
+import '../styles/main.scss';
+import './components/app-bar';
+import './components/hero-element';
+import './components/search-bar';
+import './components/foot-bar';
+import '@fortawesome/fontawesome-free/js/all';
+import App from './views/app';
+import swRegister from './utils/sw-register';
 
 const app = new App({
-  open: document.querySelector("#menu_open"),
-  drawer: document.querySelector("#drawer"),
-  close: document.querySelector("#menu_close"),
-  search: document.querySelector("#search"),
-  content: document.querySelector("#maincontent"),
+  open: document.querySelector('#menu_open'),
+  drawer: document.querySelector('#drawer'),
+  close: document.querySelector('#menu_close'),
+  search: document.querySelector('#search'),
+  content: document.querySelector('#maincontent'),
 });
 
-window.addEventListener("hashchange", () => {
+window.addEventListener('hashchange', () => {
   app.renderPage();
 });
 
-window.addEventListener("load", () => {
+window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
 });

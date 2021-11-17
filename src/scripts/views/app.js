@@ -1,9 +1,11 @@
-import routes from "../routes/routes";
-import UrlParser from "../routes/url-parser";
-import DrawerInitiator from "../utils/drawer-initiator";
+import routes from '../routes/routes';
+import UrlParser from '../routes/url-parser';
+import DrawerInitiator from '../utils/drawer-initiator';
 
 class App {
-  constructor({ open, drawer, close, search, content }) {
+  constructor({
+    open, drawer, close, search, content,
+  }) {
     this._open = open;
     this._drawer = drawer;
     this._close = close;

@@ -1,7 +1,7 @@
 class HeroElement extends HTMLElement {
   constructor() {
     super();
-    this.shadowDOM = this.attachShadow({ mode: "open" });
+    this.shadowDOM = this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
@@ -93,4 +93,4 @@ class HeroElement extends HTMLElement {
   }
 }
 
-customElements.define("hero-element", HeroElement);
+customElements.define('hero-element', HeroElement);

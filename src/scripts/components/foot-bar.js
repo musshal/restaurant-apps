@@ -1,7 +1,7 @@
 class FootBar extends HTMLElement {
   constructor() {
     super();
-    this.shadowDOM = this.attachShadow({ mode: "open" });
+    this.shadowDOM = this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
@@ -129,4 +129,4 @@ class FootBar extends HTMLElement {
   }
 }
 
-customElements.define("foot-bar", FootBar);
+customElements.define('foot-bar', FootBar);
