@@ -1,9 +1,9 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.scss';
-import './components/app-bar';
-import './components/hero-element';
-import './components/search-bar';
-import './components/foot-bar';
+import './views/components/app-bar';
+import './views/components/hero-element';
+import './views/components/search-bar';
+import './views/components/foot-bar';
 import '@fortawesome/fontawesome-free/js/all';
 import App from './views/app';
 import swRegister from './utils/sw-register';

@@ -111,9 +111,9 @@ class FootBar extends HTMLElement {
           <h2 tabIndex="0">LuweRene</h2>
           <p tabIndex="0">Dapatkan kemudahan mencari restoran terbaik di sekitarmu dengan LuweRene.</p>
           <div class="social__links">
-            <a href="#"><img src="logos/Icon_Facebook.svg" alt="facebook" width="44px"></a>
-            <a href="#"><img src="logos/instagram-circle.svg" alt="instagram" width="44px"></a>
-            <a href="#"><img src="logos/Icon_Twitter.svg" alt="twitter" width="44px"></a>
+            <a href="#"><img src="logos/icon-facebook.svg" alt="facebook" width="44px"></a>
+            <a href="#"><img src="logos/icon-instagram.svg" alt="instagram" width="44px"></a>
+            <a href="#"><img src="logos/icon-twitter.svg" alt="twitter" width="44px"></a>
           </div>
         </div>
         <div class="footer-wrapper__nav">
