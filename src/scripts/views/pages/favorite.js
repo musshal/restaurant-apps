@@ -10,12 +10,19 @@ const Favorite = {
           <search-bar></search-bar>
         </div>
         <div id="restaurants" class="restaurants"></div>
+        <div id="warning" class="warning"></div>
       </section>`;
   },
 
   async afterRender() {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
     const restaurantsContainer = document.querySelector('#restaurants');
+    const warning = document.querySelector('#warning');
+
+    if (restaurants.length === 0) {
+      warning.innerHTML = `
+        Kamu belum menambahkan restoran favoritmu, skuy tambahkan restoran favoritmu sekarang!`;
+    }
 
     restaurants.forEach((restaurant) => {
       restaurantsContainer.innerHTML

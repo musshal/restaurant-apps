@@ -59,7 +59,10 @@ const createRestaurantDetailTemplate = (restaurant) => `
     </div>
   </div>
   <div class="restaurant__reviews">
-    <h1>Reviews</h1>
+    <div class="restaurant__reviews-header">
+      <h1>Reviews</h1>
+      <button id="reviewButton">Kirim Review</button>
+    </div>
       <div class="customer__review-container">
       ${restaurant.customerReviews
     .map(
@@ -86,9 +89,23 @@ const createAddedFavoriteButtonTemplate = () => `
   <i class="fas fa-heart" aria-hidden="true"></i>
 </button>`;
 
+const createLoaderRestaurantsTemplate = () => `
+<div class="wrapper">
+  <div class="card-loader card-loader--tabs"></div>
+  <div class="card-loader card-loader--tabs"></div>
+  <div class="card-loader card-loader--tabs"></div>
+  <div class="card-loader card-loader--tabs"></div>
+  <div class="card-loader card-loader--tabs"></div>
+  <div class="card-loader card-loader--tabs"></div>
+  <div class="card-loader card-loader--tabs"></div>
+  <div class="card-loader card-loader--tabs"></div>
+  <div class="card-loader card-loader--tabs"></div>
+</div>`;
+
 export {
   createRestaurantItemTemplate,
   createRestaurantDetailTemplate,
   createAddFavoriteButtonTemplate,
   createAddedFavoriteButtonTemplate,
+  createLoaderRestaurantsTemplate,
 };
