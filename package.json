@@ -1,7 +1,7 @@
 {
   "name": "restaurant-apps",
   "version": "1.0.0",
-  "description": "",
+  "description": "The best restaurant finder",
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
@@ -10,7 +10,7 @@
     "test": "karma start"
   },
   "keywords": [],
-  "author": "your_name <your.email@domain.com>",
+  "author": "Musthafa Faishal <musthafafaishal@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.5",

@@ -4,12 +4,11 @@ import DrawerInitiator from '../utils/drawer-initiator';
 
 class App {
   constructor({
-    open, drawer, close, search, content,
+    open, drawer, close, content,
   }) {
     this._open = open;
     this._drawer = drawer;
     this._close = close;
-    this._search = search;
     this._content = content;
 
     this._initialAppShell();

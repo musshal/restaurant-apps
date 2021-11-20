@@ -13,7 +13,6 @@ const app = new App({
   open: document.querySelector('#menu_open'),
   drawer: document.querySelector('#drawer'),
   close: document.querySelector('#menu_close'),
-  search: document.querySelector('#search'),
   content: document.querySelector('#maincontent'),
 });
 
@@ -25,21 +24,3 @@ window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
 });
-
-// const search = document.getElementById("search");
-
-// search.addEventListener("keyup", function (event) {
-//   const input = search.value.toLowerCase();
-//   const restaurants = document.querySelectorAll(".content-item");
-
-//   Array.from(restaurants).forEach((restaurant) => {
-//     const restaurantLoc =
-//       restaurant.children[1].children[1].children[0].textContent;
-
-//     if (restaurantLoc.toLowerCase().indexOf(input) != -1) {
-//       restaurant.style.display = "block";
-//     } else {
-//       restaurant.style.display = "none";
-//     }
-//   });
-// });

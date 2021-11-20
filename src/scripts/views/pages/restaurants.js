@@ -34,6 +34,26 @@ const Restaurants = {
       loading.style.display = 'none';
       warning.innerHTML = `${err.message}`;
     }
+
+    /* Pencarian menggunakan API */
+    // const searchBar = document.querySelector("search-bar");
+
+    // const onInputSearchKeyup = async () => {
+    //   try {
+    //     if (searchBar.value) {
+    //       const data = await RestaurantSource.searchRestaurant(searchBar.value);
+    //       const { restaurants } = data;
+
+    //       console.log(restaurants);
+    //     }
+    //   } catch (err) {
+    //     console.log(err);
+    //     loading.style.display = "none";
+    //     warning.innerHTML = `${err.message}`;
+    //   }
+    // };
+
+    // searchBar.keyupEvent = onInputSearchKeyup;
   },
 };
 

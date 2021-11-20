@@ -16,6 +16,13 @@ class RestaurantSource {
     return responseJson;
   }
 
+  static async searchRestaurant(query) {
+    const response = await fetch(API_ENDPOINT.SEARCH_RESTAURANT(query));
+    const responseJson = await response.json();
+
+    return responseJson;
+  }
+
   static async postRestaurantReview() {
     const response = await fetch(API_ENDPOINT.POST_REVIEW, {
       method: 'POST',
