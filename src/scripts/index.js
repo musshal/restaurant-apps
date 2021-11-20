@@ -3,6 +3,7 @@ import '../styles/main.scss';
 import './views/components/app-bar';
 import './views/components/hero-element';
 import './views/components/search-bar';
+import './views/components/loader-restaurants';
 import './views/components/foot-bar';
 import '@fortawesome/fontawesome-free/js/all';
 import App from './views/app';

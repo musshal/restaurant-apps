@@ -1,8 +1,5 @@
 import RestaurantSource from '../../data/restaurant-source';
-import {
-  createLoaderRestaurantsTemplate,
-  createRestaurantItemTemplate,
-} from '../templates/template-creator';
+import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Restaurants = {
   async render() {
@@ -12,18 +9,16 @@ const Restaurants = {
           <h1 tabindex="0" class="content__title">Daftar Restoran</h1>
           <search-bar></search-bar>
         </div>
-        <div id="loading"></div>
+        <loader-restaurants></loader-restaurants>
         <div id="restaurants" class="restaurants"></div>
         <div id="warning" class="warning"></div>
       </section>`;
   },
 
   async afterRender() {
-    const loading = document.querySelector('#loading');
+    const loading = document.querySelector('loader-restaurants');
     const restaurantsContainer = document.querySelector('#restaurants');
     const warning = document.querySelector('#warning');
-
-    loading.innerHTML = createLoaderRestaurantsTemplate();
 
     try {
       const data = await RestaurantSource.getRestaurants();

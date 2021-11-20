@@ -89,23 +89,9 @@ const createAddedFavoriteButtonTemplate = () => `
   <i class="fas fa-heart" aria-hidden="true"></i>
 </button>`;
 
-const createLoaderRestaurantsTemplate = () => `
-<div class="wrapper">
-  <div class="card-loader card-loader--tabs"></div>
-  <div class="card-loader card-loader--tabs"></div>
-  <div class="card-loader card-loader--tabs"></div>
-  <div class="card-loader card-loader--tabs"></div>
-  <div class="card-loader card-loader--tabs"></div>
-  <div class="card-loader card-loader--tabs"></div>
-  <div class="card-loader card-loader--tabs"></div>
-  <div class="card-loader card-loader--tabs"></div>
-  <div class="card-loader card-loader--tabs"></div>
-</div>`;
-
 export {
   createRestaurantItemTemplate,
   createRestaurantDetailTemplate,
   createAddFavoriteButtonTemplate,
   createAddedFavoriteButtonTemplate,
-  createLoaderRestaurantsTemplate,
 };
