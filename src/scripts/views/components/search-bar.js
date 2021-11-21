@@ -70,12 +70,11 @@ class SearchBar extends HTMLElement {
 
       restaurants.forEach((restaurant) => {
         const restaurantLoc = restaurant.children[1].children[1].children[0].textContent;
-        const resto = restaurant;
 
         if (restaurantLoc.toLowerCase().indexOf(input) !== -1) {
-          resto.style.display = 'block';
+          restaurant.style.display = 'block';
         } else {
-          resto.style.display = 'none';
+          restaurant.style.display = 'none';
         }
       });
     });

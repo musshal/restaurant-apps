@@ -1,28 +1,15 @@
 class FootBar extends HTMLElement {
-  constructor() {
-    super();
-    this.shadowDOM = this.attachShadow({ mode: 'open' });
-  }
-
   connectedCallback() {
     this.render();
   }
 
   render() {
-    this.shadowDOM.innerHTML = `
+    this.innerHTML = `
       <style>
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box; 
-        }
-
-        html,
-        body {
-          margin: 0;
-          padding: 0;
-          width: 100%;
-          height: 100%;
+        footer {
+          color: #a3a1aa;
+          background-color: #f0f0f0;
+          border-top: 1px solid #dee2e6;
         }
 
         .footer-wrapper {
@@ -43,7 +30,8 @@ class FootBar extends HTMLElement {
         }
 
         .social__links a {
-          padding: 12px 0;
+          padding: 12px 8px;
+          margin-left: -8px;
         }
 
         .social__links a:hover {
@@ -60,7 +48,7 @@ class FootBar extends HTMLElement {
           text-decoration: none;
           color: #a3a1aa;
           padding: 12px 0;
-          margin-top: -15px;
+          margin-top: -18px;
         }
 
         .list__menu a:hover {
@@ -111,9 +99,9 @@ class FootBar extends HTMLElement {
           <h2 tabIndex="0">LuweRene</h2>
           <p tabIndex="0">Dapatkan kemudahan mencari restoran terbaik di sekitarmu dengan LuweRene.</p>
           <div class="social__links">
-            <a href="#"><img src="logos/icon-facebook.svg" alt="facebook" width="44px"></a>
-            <a href="#"><img src="logos/icon-instagram.svg" alt="instagram" width="44px"></a>
-            <a href="#"><img src="logos/icon-twitter.svg" alt="twitter" width="44px"></a>
+            <a href="#"><i class="fab fa-facebook fa-2x" title="Facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x" title="Instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x" title="Twitter"></i></a>
           </div>
         </div>
         <div class="footer-wrapper__nav">

@@ -35,6 +35,7 @@ class LoaderRestaurants extends HTMLElement {
         .wrapper .card {
           width: 358.5px;
           height: 520px;
+          width: 100%;
           background: #fff;
           border-radius: 5px;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -45,9 +46,9 @@ class LoaderRestaurants extends HTMLElement {
         }
 
         .wrapper .card.is-loading .image,
-        h2,
-        h3,
-        p {
+        .h2,
+        .h3,
+        .p {
           background: #eee;
           background: linear-gradient(
             110deg,
@@ -92,6 +93,7 @@ class LoaderRestaurants extends HTMLElement {
         .wrapper p {
           height: 20px;
           margin-top: 10px;
+          margin-bottom: 0;
         }
 
         @-webkit-keyframes shine {
@@ -105,142 +107,154 @@ class LoaderRestaurants extends HTMLElement {
             background-position-x: -200%;
           }
         }
+
+        @media screen and (max-width: 1000px) {
+          .wrapper {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media screen and (max-width: 600px) {
+          .wrapper {
+            grid-template-columns: repeat(1, 1fr);
+          }
+        }
       </style>
 
       <div class="wrapper">
         <div class="card is-loading">
           <div class="image"></div>
           <div class="content">
-            <h2></h2>
+            <h2 class="h2"></h2>
             <div class="flex-container">
-              <h3 class="left"></h3>
-              <h3 class="right"></h3>
+              <h3 class="h3 left"></h3>
+              <h3 class="h3 right"></h3>
             </div>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
           </div>
         </div>
         <div class="card is-loading">
           <div class="image"></div>
           <div class="content">
-            <h2></h2>
+            <h2 class="h2"></h2>
             <div class="flex-container">
-              <h3 class="left"></h3>
-              <h3 class="right"></h3>
+              <h3 class="h3 left"></h3>
+              <h3 class="h3 right"></h3>
             </div>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
           </div>
         </div>
         <div class="card is-loading">
           <div class="image"></div>
           <div class="content">
-            <h2></h2>
+            <h2 class="h2"></h2>
             <div class="flex-container">
-              <h3 class="left"></h3>
-              <h3 class="right"></h3>
+              <h3 class="h3 left"></h3>
+              <h3 class="h3 right"></h3>
             </div>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
           </div>
         </div>
         <div class="card is-loading">
           <div class="image"></div>
           <div class="content">
-            <h2></h2>
+            <h2 class="h2"></h2>
             <div class="flex-container">
-              <h3 class="left"></h3>
-              <h3 class="right"></h3>
+              <h3 class="h3 left"></h3>
+              <h3 class="h3 right"></h3>
             </div>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
           </div>
         </div>
         <div class="card is-loading">
           <div class="image"></div>
           <div class="content">
-            <h2></h2>
+            <h2 class="h2"></h2>
             <div class="flex-container">
-              <h3 class="left"></h3>
-              <h3 class="right"></h3>
+              <h3 class="h3 left"></h3>
+              <h3 class="h3 right"></h3>
             </div>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
           </div>
         </div>
         <div class="card is-loading">
           <div class="image"></div>
           <div class="content">
-            <h2></h2>
+            <h2 class="h2"></h2>
             <div class="flex-container">
-              <h3 class="left"></h3>
-              <h3 class="right"></h3>
+              <h3 class="h3 left"></h3>
+              <h3 class="h3 right"></h3>
             </div>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
           </div>
         </div>
         <div class="card is-loading">
           <div class="image"></div>
           <div class="content">
-            <h2></h2>
+            <h2 class="h2"></h2>
             <div class="flex-container">
-              <h3 class="left"></h3>
-              <h3 class="right"></h3>
+              <h3 class="h3 left"></h3>
+              <h3 class="h3 right"></h3>
             </div>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
           </div>
         </div>
         <div class="card is-loading">
           <div class="image"></div>
           <div class="content">
-            <h2></h2>
+            <h2 class="h2"></h2>
             <div class="flex-container">
-              <h3 class="left"></h3>
-              <h3 class="right"></h3>
+              <h3 class="h3 left"></h3>
+              <h3 class="h3 right"></h3>
             </div>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
           </div>
         </div>
         <div class="card is-loading">
           <div class="image"></div>
           <div class="content">
-            <h2></h2>
+            <h2 class="h2"></h2>
             <div class="flex-container">
-              <h3 class="left"></h3>
-              <h3 class="right"></h3>
+              <h3 class="h3 left"></h3>
+              <h3 class="h3 right"></h3>
             </div>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
+            <p class="p"></p>
           </div>
         </div>
       </div>`;

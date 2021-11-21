@@ -30,6 +30,8 @@ const Detail = {
 
       restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
 
+      this._postRestaurantReview(url);
+
       FavoriteButtonInitiator.init({
         favoriteButtonContainer: document.querySelector(
           '#favoriteButtonContainer',
@@ -49,6 +51,28 @@ const Detail = {
       loading.style.display = 'none';
       warning.innerHTML = `${err.message}`;
     }
+  },
+
+  _postRestaurantReview(url) {
+    const reviewButton = document.querySelector('#reviewButton');
+    const inputName = document.querySelector('#name');
+    const inputReview = document.querySelector('#review');
+
+    reviewButton.addEventListener('click', async () => {
+      if (inputName.value !== '' && inputReview.value !== '') {
+        const consumerReview = {
+          id: url.id,
+          name: inputName.value,
+          review: inputReview.value,
+        };
+
+        await RestaurantSource.postRestaurantReview(consumerReview);
+
+        alert('Review berhasil terkirim');
+      } else {
+        alert('Kolom tidak boleh kosong');
+      }
+    });
   },
 };
 

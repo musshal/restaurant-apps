@@ -3,7 +3,7 @@ const CONFIG = {
   BASE_IMG_SM_URL: 'https://restaurant-api.dicoding.dev/images/small',
   BASE_IMG_MD_URL: 'https://restaurant-api.dicoding.dev/images/medium',
   BASE_IMG_LG_URL: 'https://restaurant-api.dicoding.dev/images/large',
-  KEY: 12345,
+  KEY: '12345',
   DEFAULT_LANG: 'en-us',
   CACHE_NAME: new Date().toISOString(),
   DB_NAME: 'luwe-rene-db',

@@ -10,7 +10,7 @@ const Favorite = {
           <search-bar></search-bar>
         </div>
         <div id="restaurants" class="restaurants"></div>
-        <div id="warning" class="warning"></div>
+        <div id="warning" class="warning" tabIndex="0"></div>
       </section>`;
   },
 

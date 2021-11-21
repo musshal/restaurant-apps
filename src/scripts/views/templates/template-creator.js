@@ -15,7 +15,7 @@ const createRestaurantItemTemplate = (restaurant) => `
   </div>`;
 
 const createRestaurantDetailTemplate = (restaurant) => `
-  <div class="restaurant__container">
+  <div class="restaurant__container" tabIndex="0">
     <img class="restaurant__poster" src="${CONFIG.BASE_IMG_MD_URL}/${
   restaurant.pictureId
 }" alt="${restaurant.name}" />
@@ -42,15 +42,15 @@ const createRestaurantDetailTemplate = (restaurant) => `
     </div>
   </div>
   <div class="restaurant__menu">
-    <h1>Menu</h1>
+    <h1 tabIndex="0">Menu</h1>
     <div class="restaurant__menu-container">
-      <div class="restaurant__menu-container-makanan">
+      <div class="restaurant__menu-container-makanan" tabIndex="0">
         <h2>Makanan</h2>
         <ul>${restaurant.menus.foods
     .map((food) => `<li>${food.name}</li>`)
     .join('')}</ul>
       </div>
-      <div class="restaurant__menu-container-minuman">
+      <div class="restaurant__menu-container-minuman" tabIndex="0">
         <h2>Minuman</h2>
         <ul>${restaurant.menus.drinks
     .map((drink) => `<li>${drink.name}</li>`)
@@ -60,14 +60,23 @@ const createRestaurantDetailTemplate = (restaurant) => `
   </div>
   <div class="restaurant__reviews">
     <div class="restaurant__reviews-header">
-      <h1>Reviews</h1>
-      <button id="reviewButton">Kirim Review</button>
+      <h1 tabIndex="0">Reviews</h1>
     </div>
+    <div class="review-form">
+      <div class="input-container">
+        <input type="name" id="name" placeholder="Masukan nama Anda...">
+      </div>
+      <div class="input-container">
+        <input type="text" id="review" placeholder="Masukan review Anda...">
+      </div>
+        <button id="reviewButton">Kirim Review</button>
+      </div>
       <div class="customer__review-container">
       ${restaurant.customerReviews
+    .reverse()
     .map(
       (customerReview) => `
-            <div class="customer__review-subcontainer">
+            <div class="customer__review-subcontainer" tabIndex="0">
               <div class="customer__review-header">
                 <h3>${customerReview.name}</h3>
                 <p>${customerReview.date}</p>
