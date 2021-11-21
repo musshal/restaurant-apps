@@ -28,7 +28,7 @@ class HeroElement extends HTMLElement {
         .jumbotron {
           margin: 75px auto;
           text-align: center;
-          font-family: cursive, "Lucida Handwriting", sans-serif;
+          font-family: "Lucida Handwriting", sans-serif;
           color: white;
         }
 
