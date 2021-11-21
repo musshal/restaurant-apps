@@ -32,6 +32,7 @@ class FootBar extends HTMLElement {
         .social__links a {
           padding: 12px 8px;
           margin-left: -8px;
+          color: #A3A1AA;
         }
 
         .social__links a:hover {
