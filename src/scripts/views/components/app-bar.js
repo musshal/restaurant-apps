@@ -83,6 +83,14 @@ class AppBar extends HTMLElement {
           text-align: center;
         }
 
+        .header__menu-open {
+          color: white;
+        }
+
+        .header__menu-close {
+          color: #A3A1AA;
+        }
+
         .menu__drawer {
           display: none;
         }
@@ -133,7 +141,7 @@ class AppBar extends HTMLElement {
             color: #52525B;
           }
 
-          .nav__item:hover::after {
+          .nav__item a:hover::after {
             width: 0;
           }
 
@@ -150,13 +158,13 @@ class AppBar extends HTMLElement {
       </div>
       
       <nav>
-        <a href="#drawer" id="menu_open" class="header__menu">☰</a>
+        <a href="#drawer" id="menu_open" class="header__menu header__menu-open">☰</a>
         <ul id="drawer" class="drawer">
           <div class="menu__drawer">
             <h1 class="header__title">
               <a href="/"><span class="luwe-text">Luwe</span><span class="rene-text">Rene</span></a>
             </h1>
-            <a href="#drawer" id="menu_close" class="header__menu">✖</a>
+            <a href="#drawer" id="menu_close" class="header__menu header__menu-close">✖</a>
           </div>
           <li class="nav__item">
             <a href="/#/restaurant">Home</a>
