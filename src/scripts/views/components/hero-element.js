@@ -1,7 +1,7 @@
 class HeroElement extends HTMLElement {
   constructor() {
     super();
-    this.shadowDOM = this.attachShadow({ mode: 'open' });
+    this.shadowDOM = this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -28,7 +28,7 @@ class HeroElement extends HTMLElement {
         .jumbotron {
           margin: 75px auto;
           text-align: center;
-          font-family: "Lucida Handwriting", sans-serif;
+          font-family: "Comic Sans MS", "Comic Sans", sans-serif;
           color: white;
         }
 
@@ -93,4 +93,4 @@ class HeroElement extends HTMLElement {
   }
 }
 
-customElements.define('hero-element', HeroElement);
+customElements.define("hero-element", HeroElement);
