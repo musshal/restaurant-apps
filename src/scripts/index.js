@@ -9,6 +9,7 @@ import '@fortawesome/fontawesome-free/js/all';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 
+const skipLink = document.querySelector('.skip-link');
 const app = new App({
   open: document.querySelector('#menu_open'),
   drawer: document.querySelector('#drawer'),
@@ -23,4 +24,10 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
+});
+
+skipLink.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
+    document.querySelector('#maincontent').focus();
+  }
 });

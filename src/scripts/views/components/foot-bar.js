@@ -43,13 +43,14 @@ class FootBar extends HTMLElement {
           display: flex;
           flex-direction: column;
           padding: 0 1px;
+          font-size: 17px;
         }
 
         .list__menu a {
           text-decoration: none;
           color: #a3a1aa;
           padding: 12px 0;
-          margin-top: -18px;
+          margin-top: -19px;
         }
 
         .list__menu a:hover {

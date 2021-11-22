@@ -88,8 +88,20 @@ class HeroElement extends HTMLElement {
           <h1 class="jumbotron__header">LuweRene is the best <span class="title-text">Restaurant Finder</span></h1>
           <h2 class="jumbotron__sub-header">Kami akan membantu kamu <br /> untuk mencari restoran terbaik <br /> di sekitarmu dengan mudah. <br /> Gaskuy!</h2>
         </div>
-        <a href="#search" class="btn">Cari Restoran</a>
+        <a class="btn" tabIndex="0">Cari Restoran</a>
       </div>`;
+
+    const cariRestoranButton = this.shadowDOM.querySelector('.btn');
+
+    cariRestoranButton.addEventListener('click', (event) => {
+      event.stopPropagation();
+      document.querySelector('#search').focus();
+    });
+
+    cariRestoranButton.addEventListener('keypress', (event) => {
+      event.stopPropagation();
+      document.querySelector('#search').focus();
+    });
   }
 }
 

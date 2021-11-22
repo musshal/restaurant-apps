@@ -5,7 +5,7 @@ const CONFIG = {
   BASE_IMG_LG_URL: 'https://restaurant-api.dicoding.dev/images/large',
   KEY: '12345',
   DEFAULT_LANG: 'en-us',
-  CACHE_NAME: new Date().toISOString(),
+  CACHE_NAME: 'LuweRene-V1.0',
   DB_NAME: 'luwe-rene-db',
   DB_VERSION: 1,
   OBJECT_STORE_NAME: 'restaurants',

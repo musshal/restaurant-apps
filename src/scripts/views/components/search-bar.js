@@ -1,24 +1,10 @@
 class SearchBar extends HTMLElement {
-  constructor() {
-    super();
-    this.shadowDOM = this.attachShadow({ mode: 'open' });
-  }
-
   connectedCallback() {
     this.render();
   }
 
-  // set keyupEvent(event) {
-  //   this._keyupEvent = event;
-  //   this.render();
-  // }
-
-  // get value() {
-  //   return this.shadowDOM.querySelector("#search").value;
-  // }
-
   render() {
-    this.shadowDOM.innerHTML = `
+    this.innerHTML = `
       <style>
         .search-container {
           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -58,26 +44,6 @@ class SearchBar extends HTMLElement {
       <div class="search-container">
         <input type="search" placeholder="Masukan nama kota Anda berada..." id="search" class="search-input">
       </div>`;
-
-    // this.shadowDOM
-    //   .querySelector("#search")
-    //   .addEventListener("keyup", this._keyupEvent);
-
-    /* Pencarian tanpa API */
-    this.shadowDOM.querySelector('#search').addEventListener('keyup', () => {
-      const input = this.shadowDOM.querySelector('#search').value.toLowerCase();
-      const restaurants = document.querySelectorAll('.content-item');
-
-      restaurants.forEach((restaurant) => {
-        const restaurantLoc = restaurant.children[1].children[1].children[0].textContent;
-
-        if (restaurantLoc.toLowerCase().indexOf(input) !== -1) {
-          restaurant.style.display = 'block';
-        } else {
-          restaurant.style.display = 'none';
-        }
-      });
-    });
   }
 }
 
