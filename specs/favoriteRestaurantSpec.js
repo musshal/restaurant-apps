@@ -57,4 +57,26 @@ describe("Favoriting a Restaurant", () => {
 
     FavoriteRestaurantIdb.deleteRestaurant(1);
   });
+
+  it("should not add a restaurant again when its already favorited", async () => {
+    await FavoriteButtonInitiator.init({
+      favoriteButtonContainer: document.querySelector(
+        "#favoriteButtonContainer"
+      ),
+      restaurant: {
+        id: 1,
+      },
+    });
+
+    // tambahkan restaurant dengan id 1 ke daftar restaurant yang difavoritkan
+    await FavoriteRestaurantIdb.putRestaurant({ id: 1 });
+    // simulasikan pengguna menekan tombol favorite restaurant
+    document.querySelector("#favoriteButton").dispatchEvent(new Event("click"));
+    // tidak ada restaurant yang ganda
+    expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([
+      { id: 1 },
+    ]);
+
+    FavoriteRestaurantIdb.deleteRestaurant(1);
+  });
 });
