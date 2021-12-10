@@ -2,8 +2,15 @@ import FavoriteButtonInitiator from "../src/scripts/utils/favorite-button-initia
 import FavoriteRestaurantIdb from "../src/scripts/data/favoriterestaurant-idb";
 
 describe("Favoriting a Restaurant", () => {
-  it("should show the favorite button when the restaurant has not been favorited before", async () => {
+  const addFavoriteButtonContainer = () => {
     document.body.innerHTML = '<div id="favoriteButtonContainer"></div>';
+  };
+
+  beforeEach(() => {
+    addFavoriteButtonContainer();
+  });
+
+  it("should show the favorite button when the restaurant has not been favorited before", async () => {
     await FavoriteButtonInitiator.init({
       favoriteButtonContainer: document.querySelector(
         "#favoriteButtonContainer"
@@ -19,7 +26,6 @@ describe("Favoriting a Restaurant", () => {
   });
 
   it("should not show the unfavorite button when the restaurant has not been favorited before", async () => {
-    document.body.innerHTML = '<div id="favoriteButtonContainer"></div>';
     await FavoriteButtonInitiator.init({
       favoriteButtonContainer: document.querySelector(
         "#favoriteButtonContainer"
@@ -35,7 +41,6 @@ describe("Favoriting a Restaurant", () => {
   });
 
   it("should be able to favorite the restaurant", async () => {
-    document.body.innerHTML = '<div id="favoriteButtonContainer"></div>';
     await FavoriteButtonInitiator.init({
       favoriteButtonContainer: document.querySelector(
         "#favoriteButtonContainer"
