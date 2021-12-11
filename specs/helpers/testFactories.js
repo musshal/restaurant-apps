@@ -1,7 +1,7 @@
-import FavoriteButtonInitiator from "../../src/scripts/utils/favorite-button-initiator";
+import FavoriteButtonPresenter from "../../src/scripts/utils/favorite-button-presenter";
 
 const createFavoriteButtonPresenterWithRestaurant = async (restaurant) => {
-  await FavoriteButtonInitiator.init({
+  await FavoriteButtonPresenter.init({
     favoriteButtonContainer: document.querySelector("#favoriteButtonContainer"),
     restaurant,
   });
