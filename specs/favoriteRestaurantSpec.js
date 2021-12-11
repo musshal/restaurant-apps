@@ -14,7 +14,7 @@ describe("Favoriting a Restaurant", () => {
     await TestFactories.createFavoriteButtonPresenterWithRestaurant({ id: 1 });
 
     expect(
-      document.querySelector('[aria-label="like this restaurant"]')
+      document.querySelector('[aria-label="favorite this restaurant"]')
     ).toBeTruthy();
   });
 
@@ -22,7 +22,7 @@ describe("Favoriting a Restaurant", () => {
     await TestFactories.createFavoriteButtonPresenterWithRestaurant({ id: 1 });
 
     expect(
-      document.querySelector('[aria-label="unlike this restaurant"]')
+      document.querySelector('[aria-label="unfavorite this restaurant"]')
     ).toBeFalsy();
   });
 

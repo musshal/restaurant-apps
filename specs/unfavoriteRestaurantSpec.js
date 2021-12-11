@@ -19,7 +19,7 @@ describe("Unfavoriting a Restaurant", () => {
     await TestFactories.createFavoriteButtonPresenterWithRestaurant({ id: 1 });
 
     expect(
-      document.querySelector('[aria-label="unlike this restaurant"]')
+      document.querySelector('[aria-label="unfavorite this restaurant"]')
     ).toBeTruthy();
   });
 
@@ -33,7 +33,7 @@ describe("Unfavoriting a Restaurant", () => {
     await TestFactories.createFavoriteButtonPresenterWithRestaurant({ id: 1 });
 
     document
-      .querySelector('[aria-label="unlike this restaurant"]')
+      .querySelector('[aria-label="unfavorite this restaurant"]')
       .dispatchEvent(new Event("click"));
 
     expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([]);
@@ -47,7 +47,7 @@ describe("Unfavoriting a Restaurant", () => {
 
     // kemudian, simulasikan pengguna menekan widget batal memfavoritkan restaurant
     document
-      .querySelector('[aria-label="unlike this restaurant"]')
+      .querySelector('[aria-label="unfavorite this restaurant"]')
       .dispatchEvent(new Event("click"));
 
     expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([]);

@@ -16,9 +16,9 @@ const FavoriteButtonPresenter = {
     const { id } = this._restaurant;
 
     if (await this._isRestaurantExist(id)) {
-      this._renderAddedFavorite();
+      this._renderFavorited();
     } else {
-      this._renderAddFavorite();
+      this._renderFavorite();
     }
   },
 
@@ -28,8 +28,9 @@ const FavoriteButtonPresenter = {
     return !!restaurant;
   },
 
-  _renderAddFavorite() {
-    this._favoriteButtonContainer.innerHTML = createFavoriteRestaurantButtonTemplate();
+  _renderFavorite() {
+    this._favoriteButtonContainer.innerHTML =
+      createFavoriteRestaurantButtonTemplate();
 
     const favoriteButton = document.querySelector("#favoriteButton");
 
@@ -39,7 +40,7 @@ const FavoriteButtonPresenter = {
     });
   },
 
-  _renderAddedFavorite() {
+  _renderFavorited() {
     this._favoriteButtonContainer.innerHTML =
       createUnfavoriteRestaurantButtonTemplate();
 
