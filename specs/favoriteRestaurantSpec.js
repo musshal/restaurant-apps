@@ -79,4 +79,17 @@ describe("Favoriting a Restaurant", () => {
 
     FavoriteRestaurantIdb.deleteRestaurant(1);
   });
+
+  xit("should not add a restaurant when it has no id", async () => {
+    await FavoriteButtonInitiator.init({
+      favoriteButtonContainer: document.querySelector(
+        "#favoriteButtonContainer"
+      ),
+      restaurant: {},
+    });
+
+    document.querySelector("#favoriteButton").dispatchEvent(new Event("click"));
+
+    expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([]);
+  });
 });
