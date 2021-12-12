@@ -1,3 +1,4 @@
+import FavoriteRestaurantIdb from "../../data/favoriterestaurant-idb";
 import RestaurantSource from "../../data/restaurant-source";
 import UrlParser from "../../routes/url-parser";
 import FavoriteButtonPresenter from "../../utils/favorite-button-presenter";
@@ -37,6 +38,7 @@ const Detail = {
         favoriteButtonContainer: document.querySelector(
           "#favoriteButtonContainer"
         ),
+        favoriteRestaurants: FavoriteRestaurantIdb,
         restaurant: {
           id: restaurant.id,
           pictureId: restaurant.pictureId,

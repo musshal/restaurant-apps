@@ -1,14 +1,13 @@
-import FavoriteRestaurantIdb from "../data/favoriterestaurant-idb";
 import {
   createFavoriteRestaurantButtonTemplate,
   createUnfavoriteRestaurantButtonTemplate,
 } from "../views/templates/template-creator";
 
 const FavoriteButtonPresenter = {
-  async init({ favoriteButtonContainer, restaurant }) {
+  async init({ favoriteButtonContainer, favoriteRestaurants, restaurant }) {
     this._favoriteButtonContainer = favoriteButtonContainer;
     this._restaurant = restaurant;
-    this._favoriteRestaurants = FavoriteRestaurantIdb;
+    this._favoriteRestaurants = favoriteRestaurants;
 
     await this._renderButton();
   },
