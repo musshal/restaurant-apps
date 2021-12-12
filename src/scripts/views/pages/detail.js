@@ -1,6 +1,6 @@
 import RestaurantSource from "../../data/restaurant-source";
 import UrlParser from "../../routes/url-parser";
-import FavoriteButtonInitiator from "../../utils/favorite-button-initiator";
+import FavoriteButtonPresenter from "../../utils/favorite-button-presenter";
 import { createRestaurantDetailTemplate } from "../templates/template-creator";
 
 const Detail = {
@@ -33,7 +33,7 @@ const Detail = {
 
       this._postRestaurantReview(url);
 
-      FavoriteButtonInitiator.init({
+      FavoriteButtonPresenter.init({
         favoriteButtonContainer: document.querySelector(
           "#favoriteButtonContainer"
         ),
