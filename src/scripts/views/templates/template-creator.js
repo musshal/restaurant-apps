@@ -4,7 +4,7 @@ const createRestaurantItemTemplate = (restaurant) => `
   <div class="content-item" id="${restaurant.id}" tabIndex="0">
     <img src="${CONFIG.BASE_IMG_SM_URL}/${restaurant.pictureId}" alt="">
     <div class="content-item__info">
-      <h1>${restaurant.name}</h1>
+      <h1 class="restaurant__name">${restaurant.name}</h1>
       <div class="loc__rate">
         <h2><i class="fas fa-map-marker-alt" title="Icon Kota Restoran"></i> ${restaurant.city}</h2>
         <h3><i class="fas fa-star" title="Icon Ulasan Restoran"></i> ${restaurant.rating}</h3>

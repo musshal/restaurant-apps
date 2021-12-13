@@ -1,5 +1,5 @@
-import FavoriteRestaurantIdb from '../../data/favoriterestaurant-idb';
-import { createRestaurantItemTemplate } from '../templates/template-creator';
+import FavoriteRestaurantIdb from "../../data/favoriterestaurant-idb";
+import { createRestaurantItemTemplate } from "../templates/template-creator";
 
 const Favorite = {
   async render() {
@@ -15,23 +15,24 @@ const Favorite = {
   },
 
   async afterRender() {
-    const search = document.querySelector('#search');
+    const search = document.querySelector("#search");
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
-    const restaurantsContainer = document.querySelector('#restaurants');
-    const warning = document.querySelector('#warning');
+    const restaurantsContainer = document.querySelector("#restaurants");
+    const warning = document.querySelector("#warning");
 
     /* Pencarian tanpa API */
-    search.addEventListener('keyup', () => {
+    search.addEventListener("keyup", () => {
       const input = search.value.toLowerCase();
-      const allRestaurants = document.querySelectorAll('.content-item');
+      const allRestaurants = document.querySelectorAll(".content-item");
 
       allRestaurants.forEach((restaurant) => {
-        const restaurantLoc = restaurant.children[1].children[1].children[0].textContent;
+        const restaurantLoc =
+          restaurant.children[1].children[1].children[0].textContent;
 
         if (restaurantLoc.toLowerCase().indexOf(input) !== -1) {
-          restaurant.style.display = 'block';
+          restaurant.style.display = "block";
         } else {
-          restaurant.style.display = 'none';
+          restaurant.style.display = "none";
         }
       });
     });
@@ -42,8 +43,8 @@ const Favorite = {
     }
 
     restaurants.forEach((restaurant) => {
-      restaurantsContainer.innerHTML
-        += createRestaurantItemTemplate(restaurant);
+      restaurantsContainer.innerHTML +=
+        createRestaurantItemTemplate(restaurant);
     });
   },
 };
