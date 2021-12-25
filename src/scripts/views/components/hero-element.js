@@ -55,7 +55,8 @@ class HeroElement extends HTMLElement {
           
         }
 
-        .btn {
+        button {
+          border: 0;
           border-radius: 25px;
           padding: 11px;
           box-sizing: border-box;
@@ -65,7 +66,7 @@ class HeroElement extends HTMLElement {
           text-decoration: none;
         }
 
-        .btn:hover {
+        button:hover {
           opacity: .8;
           cursor: pointer;
         }
@@ -88,7 +89,7 @@ class HeroElement extends HTMLElement {
           <h1 class="jumbotron__header">LuweRene is the best <span class="title-text">Restaurant Finder</span></h1>
           <h2 class="jumbotron__sub-header">Kami akan membantu kamu <br /> untuk mencari restoran terbaik <br /> di sekitarmu dengan mudah. <br /> Gaskuy!</h2>
         </div>
-        <a class="btn" tabIndex="0">Cari Restoran</a>
+        <button class="btn">Cari Restoran</button>
       </div>`;
 
     const cariRestoranButton = this.shadowDOM.querySelector('.btn');
