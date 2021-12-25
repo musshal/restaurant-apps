@@ -159,12 +159,12 @@ class AppBar extends HTMLElement {
       <nav>
         <a id="menu_open" class="header__menu header__menu-open"><i class="fas fa-bars fa-2x"></i></a>
         <ul id="drawer" class="drawer">
-          <div class="menu__drawer">
+          <li class="menu__drawer">
             <h1 class="header__title">
               <a href="/"><span class="luwe-text">Luwe</span><span class="rene-text">Rene</span></a>
             </h1>
             <a id="menu_close" class="header__menu header__menu-close"><i class="fas fa-times fa-2x"></i></a>
-          </div>
+          </li>
           <li class="nav__item">
             <a href="/#/restaurant">Home</a>
           </li>
