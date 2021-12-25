@@ -1,8 +1,10 @@
-import CONFIG from "../../globals/config";
+import CONFIG from '../../globals/config';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="content-item" id="${restaurant.id}" tabIndex="0">
-    <img src="${CONFIG.BASE_IMG_SM_URL}/${restaurant.pictureId}" alt="">
+    <img class="lazyload" data-src="${CONFIG.BASE_IMG_SM_URL}/${restaurant.pictureId}" alt="${restaurant.name}">
     <div class="content-item__info">
       <h1 class="restaurant__name">${restaurant.name}</h1>
       <div class="loc__rate">
@@ -16,27 +18,27 @@ const createRestaurantItemTemplate = (restaurant) => `
 
 const createRestaurantDetailTemplate = (restaurant) => `
   <div class="restaurant__container" tabIndex="0">
-    <img class="restaurant__poster" src="${CONFIG.BASE_IMG_MD_URL}/${
-  restaurant.pictureId
-}" alt="${restaurant.name}" />
+    <img class="restaurant__poster lazyload" data-src="${
+  CONFIG.BASE_IMG_MD_URL
+}/${restaurant.pictureId}" alt="${restaurant.name}" />
     <div class="restaurant__info">
       <div class="restaurant__header">
         <h1 class="restaurant__name">${restaurant.name}</h1>
         <h2><i class="fas fa-star" title="Icon Ulasan Restoran"></i> ${
-          restaurant.rating
-        }</h2>
+  restaurant.rating
+}</h2>
       </div>
       <div class=loc__rate>
         <h2><i class="fas fa-map-marker-alt" title="Icon Kota Restoran"></i> ${
-          restaurant.city
-        }</h2>
+  restaurant.city
+}</h2>
         <h2><i class="fas fa-map-marked-alt" title="Icon Alamat Restoran"></i> ${
-          restaurant.address
-        }</h2>
+  restaurant.address
+}</h2>
       </div>
       <h5>${restaurant.categories
-        .map((category) => `<span>${category.name}</span>`)
-        .join(" ")}</h5>
+    .map((category) => `<span>${category.name}</span>`)
+    .join(' ')}</h5>
       <h4>Deskripsi</h4>
       <p>${restaurant.description}</p>
     </div>
@@ -47,14 +49,14 @@ const createRestaurantDetailTemplate = (restaurant) => `
       <div class="restaurant__menu-container-makanan" tabIndex="0">
         <h2>Makanan</h2>
         <ul>${restaurant.menus.foods
-          .map((food) => `<li>${food.name}</li>`)
-          .join("")}</ul>
+    .map((food) => `<li>${food.name}</li>`)
+    .join('')}</ul>
       </div>
       <div class="restaurant__menu-container-minuman" tabIndex="0">
         <h2>Minuman</h2>
         <ul>${restaurant.menus.drinks
-          .map((drink) => `<li>${drink.name}</li>`)
-          .join("")}</ul>
+    .map((drink) => `<li>${drink.name}</li>`)
+    .join('')}</ul>
       </div>
     </div>
   </div>
@@ -73,18 +75,18 @@ const createRestaurantDetailTemplate = (restaurant) => `
       </div>
       <div class="customer__review-container">
       ${restaurant.customerReviews
-        .reverse()
-        .map(
-          (customerReview) => `
+    .reverse()
+    .map(
+      (customerReview) => `
             <div class="customer__review-subcontainer" tabIndex="0">
               <div class="customer__review-header">
                 <h3>${customerReview.name}</h3>
                 <p>${customerReview.date}</p>
               </div>
               <p class="review__content">${customerReview.review}</p>
-            </div>`
-        )
-        .join("")}
+            </div>`,
+    )
+    .join('')}
       </div>
   </div>`;
 

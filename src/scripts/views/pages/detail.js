@@ -1,8 +1,8 @@
-import FavoriteRestaurantIdb from "../../data/favoriterestaurant-idb";
-import RestaurantSource from "../../data/restaurant-source";
-import UrlParser from "../../routes/url-parser";
-import FavoriteButtonPresenter from "../../utils/favorite-button-presenter";
-import { createRestaurantDetailTemplate } from "../templates/template-creator";
+import FavoriteRestaurantIdb from '../../data/favoriterestaurant-idb';
+import RestaurantSource from '../../data/restaurant-source';
+import UrlParser from '../../routes/url-parser';
+import FavoriteButtonPresenter from '../../utils/favorite-button-presenter';
+import { createRestaurantDetailTemplate } from '../templates/template-creator';
 
 const Detail = {
   async render() {
@@ -21,22 +21,21 @@ const Detail = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const loading = document.querySelector("#loading");
-    const restaurantContainer = document.querySelector("#restaurant");
-    const warning = document.querySelector("#warning");
+    const loading = document.querySelector('#loading');
+    const restaurantContainer = document.querySelector('#restaurant');
+    const warning = document.querySelector('#warning');
 
     try {
       const data = await RestaurantSource.getRestaurantDetail(url.id);
       const { restaurant } = data;
 
-      restaurantContainer.innerHTML =
-        createRestaurantDetailTemplate(restaurant);
+      restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
 
       this._postRestaurantReview(url);
 
       FavoriteButtonPresenter.init({
         favoriteButtonContainer: document.querySelector(
-          "#favoriteButtonContainer"
+          '#favoriteButtonContainer',
         ),
         favoriteRestaurants: FavoriteRestaurantIdb,
         restaurant: {
@@ -49,20 +48,20 @@ const Detail = {
         },
       });
 
-      loading.style.display = "none";
+      loading.style.display = 'none';
     } catch (err) {
-      loading.style.display = "none";
+      loading.style.display = 'none';
       warning.innerHTML = `${err.message}`;
     }
   },
 
   _postRestaurantReview(url) {
-    const reviewButton = document.querySelector("#reviewButton");
-    const inputName = document.querySelector("#name");
-    const inputReview = document.querySelector("#review");
+    const reviewButton = document.querySelector('#reviewButton');
+    const inputName = document.querySelector('#name');
+    const inputReview = document.querySelector('#review');
 
-    reviewButton.addEventListener("click", async () => {
-      if (inputName.value !== "" && inputReview.value !== "") {
+    reviewButton.addEventListener('click', async () => {
+      if (inputName.value !== '' && inputReview.value !== '') {
         const consumerReview = {
           id: url.id,
           name: inputName.value,
@@ -71,9 +70,9 @@ const Detail = {
 
         await RestaurantSource.postRestaurantReview(consumerReview);
 
-        alert("Review berhasil terkirim");
+        alert('Review berhasil terkirim');
       } else {
-        alert("Kolom tidak boleh kosong");
+        alert('Kolom tidak boleh kosong');
       }
     });
   },

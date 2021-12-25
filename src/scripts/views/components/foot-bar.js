@@ -111,7 +111,7 @@ class FootBar extends HTMLElement {
           <div class="list__menu">
             <a href="#/restaurant">Home</a>
             <a href="#/favorite">Favorite</a>
-            <a href="https://www.linkedin.com/in/musshal/" target="_blank">About Us</a>
+            <a href="https://www.linkedin.com/in/musshal/" target="_blank" rel="noreferrer">About Us</a>
           </div>
         </div>
       </div>

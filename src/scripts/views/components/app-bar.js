@@ -172,7 +172,7 @@ class AppBar extends HTMLElement {
             <a href="/#/favorite">Favorite</a>
           </li>
           <li class="nav__item">
-            <a href="https://www.linkedin.com/in/musshal/" target="_blank">About Us</a>
+            <a href="https://www.linkedin.com/in/musshal/" target="_blank" rel="noreferrer">About Us</a>
           </li>
         </ul>
       </nav>`;

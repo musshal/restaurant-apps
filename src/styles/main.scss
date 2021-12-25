@@ -1,5 +1,4 @@
 $font: "Segoe UI", sans-serif;
-$jumbotron-img: url("../public/images/heros/hero-image_2.jpg");
 
 * {
   margin: 0;
@@ -35,7 +34,7 @@ body {
 }
 
 header {
-  background-image: $jumbotron-img;
+  background-image: url("/images/hero-image_2-large.jpg");
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -507,6 +506,10 @@ header {
     }
 
     @media screen and (max-width: 600px) {
+      header {
+        background-image: url("/images/hero-image_2-small.jpg");
+      }
+
       .content__header {
         flex-direction: column;
         text-align: center;

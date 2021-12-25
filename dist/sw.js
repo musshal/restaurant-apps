@@ -1,9 +1,12 @@
 var serviceWorkerOption = {
   "assets": [
     "/favicon.png",
-    "/images/heros/hero-image_2.jpg",
-    "/bd6b63650298f334a08b66446d66c536.jpg",
+    "/0.bundle.js",
+    "/1.bundle.js",
+    "/2.bundle.js",
     "/bundle.js",
+    "/4.bundle.js",
+    "/5.bundle.js",
     "/index.html",
     "/manifest.f67ed9ccbdd7e6811902ec9ec36bd4e7.json",
     "/icon_512x512.50706a2dfcc3144f630331092a58cc4d.png",
