@@ -12,7 +12,7 @@ module.exports = {
   entry: path.resolve(__dirname, "src/scripts/index.js"),
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
   },
   module: {
     rules: [
@@ -80,7 +80,7 @@ module.exports = {
         }),
       ],
     }),
-    // new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin(),
   ],
   optimization: {
     splitChunks: {

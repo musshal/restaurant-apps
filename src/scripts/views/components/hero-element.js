@@ -58,7 +58,7 @@ class HeroElement extends HTMLElement {
         button {
           border: 0;
           border-radius: 25px;
-          padding: 11px;
+          padding: 15px;
           box-sizing: border-box;
           color: white;
           background-color: #bf1722;
