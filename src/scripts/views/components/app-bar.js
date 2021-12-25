@@ -102,7 +102,7 @@ class AppBar extends HTMLElement {
           .menu__drawer {
             display: flex;
             width: 100%;
-            padding: 20px 32px;
+            padding: 20px 32px 0;
             justify-content: space-between;
             border-bottom: 1px solid #dee2e6;
             font-size: 21px;
@@ -163,7 +163,7 @@ class AppBar extends HTMLElement {
             <h1 class="header__title">
               <a href="/"><span class="luwe-text">Luwe</span><span class="rene-text">Rene</span></a>
             </h1>
-            <a id="menu_close" class="header__menu header__menu-close"><i class="fas fa-times fa-2x"></i></a>
+            <p id="menu_close" class="header__menu header__menu-close"><i class="fas fa-times fa-2x"></i></p>
           </li>
           <li class="nav__item">
             <a href="/#/restaurant">Home</a>
