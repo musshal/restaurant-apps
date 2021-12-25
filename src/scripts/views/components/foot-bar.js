@@ -63,16 +63,6 @@ class FootBar extends HTMLElement {
           border-top: 1px solid #dee2e6;
         }
 
-        .luwe-text {
-          color: #bf1722;
-          font-weight: bolder;
-        }
-
-        .rene-text {
-          color: burlywood;
-          font-weight: bolder;
-        }
-
         @media screen and (max-width: 800px) {
           .footer-wrapper {
             text-align: center;
@@ -115,7 +105,7 @@ class FootBar extends HTMLElement {
           </div>
         </div>
       </div>
-      <p tabIndex="0" class="copyright">Copyright &copy; 2021 - <span class="luwe-text">Luwe</span><span class="rene-text">Rene</span></p>`;
+      <p tabIndex="0" class="copyright">Copyright &copy; 2021 - LuweRene</p>`;
   }
 }
 
