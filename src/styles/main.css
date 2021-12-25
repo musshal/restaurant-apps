@@ -33,7 +33,7 @@ body {
 }
 
 header {
-  background-image: url("../public/images/heros/hero-image_2.jpg");
+  background-image: url("/images/hero-image_2-large.jpg");
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -569,6 +569,9 @@ header::after {
 }
 
 @media screen and (max-width: 1200px) and (max-width: 1000px) and (max-width: 600px) {
+  header {
+    background-image: url("/images/hero-image_2-small.jpg");
+  }
   .content__header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
