@@ -82,6 +82,30 @@ class HeroElement extends HTMLElement {
             font-size: 15px;
           }
         }
+
+        @media screen and (max-width: 375px) {
+          .jumbotron__header, .jumbotron__sub-header {
+            font-size: 13px;
+          }
+        }
+
+        @media screen and (max-width: 360px) {
+          .jumbotron__header, .jumbotron__sub-header {
+            font-size: 12px;
+          }
+        }
+
+        @media screen and (max-width: 320px) {
+          .jumbotron__header, .jumbotron__sub-header {
+            font-size: 10px;
+          }
+        }
+
+        @media screen and (max-width: 280px) {
+          .jumbotron__header, .jumbotron__sub-header {
+            font-size: 8px;
+          }
+        }
       </style>
 
       <div class="jumbotron">
