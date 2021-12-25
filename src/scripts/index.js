@@ -6,6 +6,8 @@ import './views/components/search-bar';
 import './views/components/loader-restaurants';
 import './views/components/foot-bar';
 import '@fortawesome/fontawesome-free/js/all';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 

@@ -1,6 +1,4 @@
 import CONFIG from '../../globals/config';
-import 'lazysizes';
-import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="content-item" id="${restaurant.id}" tabIndex="0">
