@@ -70,7 +70,7 @@ class AppBar extends HTMLElement {
           color: inherit;
         }
 
-        a:hover {
+        a:hover, p:hover {
           cursor: pointer;
         }
 
@@ -157,7 +157,7 @@ class AppBar extends HTMLElement {
       </div>
       
       <nav>
-        <a id="menu_open" class="header__menu header__menu-open"><i class="fas fa-bars fa-2x"></i></a>
+        <p id="menu_open" class="header__menu header__menu-open"><i class="fas fa-bars fa-2x"></i></p>
         <ul id="drawer" class="drawer">
           <li class="menu__drawer">
             <h1 class="header__title">
