@@ -7,7 +7,7 @@ class FootBar extends HTMLElement {
     this.innerHTML = `
       <style>
         footer {
-          color: #a3a1aa;
+          color: #52525B;
           background-color: #f0f0f0;
           border-top: 1px solid #dee2e6;
         }
@@ -32,7 +32,7 @@ class FootBar extends HTMLElement {
         .social__links a {
           padding: 12px 8px;
           margin-left: -8px;
-          color: #A3A1AA;
+          color: #52525B;
         }
 
         .social__links a:hover {
@@ -48,7 +48,7 @@ class FootBar extends HTMLElement {
 
         .list__menu a {
           text-decoration: none;
-          color: #a3a1aa;
+          color: #52525B;
           padding: 12px 0;
           margin-top: -19px;
         }
